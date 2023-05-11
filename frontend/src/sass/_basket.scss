@@ -1,4 +1,85 @@
-.basket-container{
+.cart-container{
     height: 100vh;
     background: url("./assets/fond-basket.jpg") no-repeat fixed center /cover;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .cart-box{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-top: 2rem;
+       border-bottom: 0.2rem solid #0c0c0c;
+
+       .p{
+        font-weight: bold;
+        margin-left: 1rem;
+       }
+        .buttons-container{
+            display: flex;
+            
+        
+       .button-increment{
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+       }
+       .button-quantity{
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+       }
+
+       .button-decrement{
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+       }
+    }
+    .button-remove{
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: aqua;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        }
+
+        .button-remove :hover{
+            background-color: green;
+    }
+
+       img{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    }
+    
+
+        .total{
+            display: flex;
+            justify-content: space-between;
+
+            .text-price{
+                font-size: 2rem;
+                color: aqua;
+                font-weight: bold;
+                letter-spacing: 0.2rem;
+            }       
+            .price-value{
+                font-size: 2rem;
+                color: green;
+                font-weight: bold;
+            }
+    }
+
+
+
 }
+
