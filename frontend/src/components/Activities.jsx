@@ -47,7 +47,7 @@ function Activities() {
         )}
 
         <button type="button" aria-label="addBtn" className="addBtn">
-          Ajouter au panier
+          Réserver
         </button>
       </div>
     </>
