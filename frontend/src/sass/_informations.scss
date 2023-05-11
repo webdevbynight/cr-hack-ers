@@ -21,12 +21,13 @@
     justify-content: space-around;
     margin-bottom: 2rem;
 
-    .picture1_info,
-    .picture2_info,
-    .picture3_info {
-      width: 20%;
+    img {
+      margin-bottom: .5rem;
+      aspect-ratio: 1;
+      object-fit: cover;
       box-shadow: 5px 5px 3px 1px black;
       transition: transform 0.3s ease-in-out;
+
     }
   }
   img:hover {
@@ -35,11 +36,5 @@
 
   @media screen and (min-width: 700px) {
     flex-direction: column;
-
-    .picture1_info,
-    .picture2_info,
-    .picture3_info {
-      width: 30%;
-    }
   }
 }
