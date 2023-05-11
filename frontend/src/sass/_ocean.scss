@@ -1,15 +1,16 @@
-.page-bg {
-  background-color: red;
-  // background: url("@assets/bg3.png") no-repeat top center;
-  // background-size: cover;
-  // z-index: -1;
+.bg-page {
+  background: url("@assets/bg3.png") no-repeat top center;
+  background-size: cover;
 }
 
 .container-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15rem;
+  padding: 15rem;
+  h1 {
+    font-size: 6rem;
+  }
   h2 {
     font-size: 3rem;
     margin-top: 2rem;
