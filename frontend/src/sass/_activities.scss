@@ -1,0 +1,56 @@
+.activities-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 70vw;
+  padding: 20px;
+  height: 15rem;
+  img {
+    width: 15%;
+    margin-right: 2rem;
+  }
+  .text-container {
+    h3 {
+      font-size: 25px;
+    }
+  }
+  .previousBtn:before {
+    content: "\003c";
+    padding-right: 5px;
+  }
+  .previousBtn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .nextBtn::before {
+    content: "\003e";
+    padding-right: 5px;
+  }
+  .nextBtn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  .addBtn {
+    position: relative;
+    top: 50px;
+    right: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #0921f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+}

@@ -1,22 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import "./styles.scss";
+import Header from "./components/Header";
 import Welcome from "./pages/Welcome";
+import Ocean from "./pages/Ocean";
+import ScrollToTop from "./components/ScrollToTop";
 import Basket from "./pages/Basket";
-import test from "./assets/pexels-jeremy-bishop-2397651.jpg";
+import "./styles.scss";
 
 function App() {
   const products = [
     {
       id: 1,
       title: "salut",
-      img: test,
+      img: "",
       price: 34,
     },
     {
       id: 2,
       title: "robert",
-      img: test,
+      img: "",
       price: 54,
     },
   ];
@@ -50,6 +52,8 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <Header />
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route
@@ -63,6 +67,7 @@ function App() {
             />
           }
         />
+        <Route path="/ocean/:id" element={<Ocean />} />
       </Routes>
     </BrowserRouter>
   );

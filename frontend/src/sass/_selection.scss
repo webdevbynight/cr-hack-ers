@@ -1,0 +1,42 @@
+.verybig-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rem;
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 5rem;
+  }
+
+  .verybig-bubbles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 13rem;
+    margin-top: 15rem;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    background: rgba(217, 217, 217, 0.19);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.149),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 0.601);
+    @media screen and (max-width: 768px) {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .link {
+      text-decoration: none;
+      list-style-type: none;
+      color: black;
+      text-align: center;
+      font-size: 23px;
+      user-select: none;
+      @media screen and (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
