@@ -15,7 +15,7 @@ function Ocean() {
       <div className="container-page">
         <h1>{oceanData.title}</h1>
         <div className="infos">
-          <Informations id={id} />
+          <Informations />
         </div>
         <div className="locations">
           <Locations />
