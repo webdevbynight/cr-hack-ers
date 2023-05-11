@@ -14,7 +14,7 @@ function Activities() {
 
   return (
     <>
-      <h2>Activités</h2>
+      <h2>Animations</h2>
       <div className="activities-container">
         {activitiesIndex > 0 && (
           <button

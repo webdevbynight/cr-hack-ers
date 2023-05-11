@@ -2,18 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 3px 3px 5px 2px rgba(185, 228, 241, 0.829);
   width: 70vw;
   padding: 30px;
-  height: 15rem;
+  height: 100%;
   img {
     width: 15%;
     margin-right: 2rem;
-  }
-  .text-container {
-    h3 {
-      font-size: 25px;
-    }
+    box-shadow: 5px 5px 3px 1px black;
   }
   .previousBtn:before {
     content: "\003c";
