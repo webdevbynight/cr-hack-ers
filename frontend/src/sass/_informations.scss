@@ -20,9 +20,7 @@
     justify-content: space-around;
     margin-bottom: 2rem;
 
-    .picture1_info,
-    .picture2_info,
-    .picture3_info {
+    img {
       width: 20%;
     }
   }
@@ -30,10 +28,10 @@
   @media screen and (min-width: 700px) {
     flex-direction: column;
 
-    .picture1_info,
-    .picture2_info,
-    .picture3_info {
-      width: 30%;
+    .pictures_info_container {
+      img {
+        width: 30%;
+      }
     }
   }
 }
