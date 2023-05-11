@@ -8,7 +8,6 @@
     top: 50vh;
     width: 30px;
     height: 50px;
-    margin-left: 50px /2;
     border: calc(30px / 10) solid white;
     border-radius: 50px;
     box-sizing: border-box;
@@ -84,7 +83,7 @@
   }
 
   .parallax {
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
