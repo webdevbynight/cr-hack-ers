@@ -5,25 +5,26 @@ import Welcome from "./pages/Welcome";
 import Ocean from "./pages/Ocean";
 import ScrollToTop from "./components/ScrollToTop";
 import Basket from "./pages/Basket";
+import articles from "./data/articles.json";
 import "./styles.scss";
 
 function App() {
-  const products = [
-    {
-      id: 1,
-      title: "salut",
-      img: "",
-      price: 34,
-    },
-    {
-      id: 2,
-      title: "robert",
-      img: "",
-      price: 54,
-    },
-  ];
+  // const products = [
+  //   {
+  //     id: 1,
+  //     title: "salut",
+  //     img: "",
+  //     price: 34,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "robert",
+  //     img: "",
+  //     price: 54,
+  //   },
+  // ];
   const [carts, setCarts] = useState([]);
-
+  console.info(carts);
   const handleAddItem = (clickedItem) => {
     setCarts((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
@@ -60,14 +61,33 @@ function App() {
           path="/basket"
           element={
             <Basket
+              articles={articles}
               carts={carts}
               handleAddItem={handleAddItem}
               handleRemoveItem={handleRemoveItem}
-              products={products}
+              // products={articles}
             />
           }
         />
-        <Route path="/ocean/:id" element={<Ocean />} />
+        <Route
+          path="/ocean/:id"
+          element={
+            <>
+              <Ocean
+                articles={articles}
+                carts={carts}
+                handleAddItem={handleAddItem}
+                // products={products}
+              />
+              <Basket
+                carts={carts}
+                handleAddItem={handleAddItem}
+                handleRemoveItem={handleRemoveItem}
+                // products={articles}
+              />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

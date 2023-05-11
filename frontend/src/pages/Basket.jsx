@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-return-assign */
 import { useEffect, useState } from "react";
-import Button from "../components/ButtonCart";
+import { PropTypes } from "prop-types";
+import ButtonRemove from "../components/ButtonRemove";
+import ButtonAdd from "../components/ButtonAdd";
 
 function Basket({ handleAddItem, handleRemoveItem, carts }) {
   const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
@@ -11,31 +11,27 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
       const totalQuantity = carts.reduce((acc, item) => {
         return acc + item.quantity;
       }, 0);
-      const totalPrice = carts.reduce((acc, item) => {
-        return item.price;
-      }, 0);
       setTotalItemsQuantity(totalQuantity);
+      const totalPrice = carts[1].price;
       setTotalItemsPrice(totalPrice);
     }
-  }, [carts, totalItemsQuantity]);
+  }, [carts, totalItemsQuantity, totalItemsPrice]);
+
   console.info(carts);
   return (
     <article className="cart-container">
       {carts.map((cart) => (
         <div className="cart-box" key={cart.id}>
           <div className="cart-img">
-            <img src={cart.img} alt="" />
-            <p>{cart.title}</p>
+            <img src={cart.image} alt="img category" />
+            <p>{cart.name}</p>
           </div>
           <div className="buttons-container">
-            <Button
-              handleAddItem={handleAddItem}
-              handleRemoveItem={handleRemoveItem}
-              product={cart}
-            />
+            <ButtonAdd handleAddItem={handleAddItem} product={cart} />
             <button className="button-quantity" type="button">
               {cart.quantity}
             </button>
+            <ButtonRemove handleRemoveItem={handleRemoveItem} product={cart} />
           </div>
           <div className="button-remove-container">
             <span>{cart.price * cart.quantity}</span>
@@ -51,5 +47,10 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
     </article>
   );
 }
+Basket.propTypes = {
+  carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+};
 
 export default Basket;

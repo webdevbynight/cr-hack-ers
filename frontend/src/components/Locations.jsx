@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import articles from "../data/articles.json";
+import { PropTypes } from "prop-types";
+// import articles from "../data/articles.json";
+import ButtonAdd from "./ButtonAdd";
 
-function Locations() {
+function Locations({ handleAddItem, carts, articles }) {
   const { id } = useParams();
   const locations = articles.filter(
     (article) =>
@@ -45,13 +47,22 @@ function Locations() {
             }}
           />
         )}
-
-        <button type="button" aria-label="addBtn" className="addBtn">
+        <ButtonAdd
+          carts={carts}
+          handleAddItem={handleAddItem}
+          product={locations[locationsIndex]}
+        />
+        {/* <button type="button" aria-label="addBtn" className="addBtn">
           Ajouter au panier
-        </button>
+        </button> */}
       </div>
     </>
   );
 }
+Locations.propTypes = {
+  carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+  articles: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+};
 
 export default Locations;
