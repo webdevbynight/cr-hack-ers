@@ -18,10 +18,11 @@ function Selection() {
   }, []);
   return (
     <>
-      <span className="bubble-container1">
-        <Bubbles />
-      </span>
-
+      {scrollTop >= 5 && (
+        <span className="bubble-container1">
+          <Bubbles />
+        </span>
+      )}
       <div className="verybig-bubbles bubble1">
         <h3>
           <Link to="/ocean/1">Océan Pacifique</Link>
