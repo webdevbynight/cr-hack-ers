@@ -3,18 +3,16 @@
   align-items: center;
   justify-content: space-between;
   background-color: #67b2dd;
-  width: 60rem;
+  width: 70vw;
+  padding: 20px;
   height: 15rem;
   img {
-    width: 15rem;
+    width: 15%;
     margin-right: 2rem;
   }
   .text-container {
     h3 {
       font-size: 25px;
-    }
-    p {
-      font-size: 18px;
     }
   }
   .previousBtn:before {
