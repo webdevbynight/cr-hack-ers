@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
 @-webkit-keyframes sideWays {
   0% {
     margin-left: 0px;
@@ -14,7 +16,6 @@
   100% {
     margin-left: 10px;
   }
-
 }
 
 @keyframes sideWays {
@@ -41,7 +42,6 @@
   100% {
     margin-top: 10px;
   }
-
 }
 
 @keyframes upWays {
@@ -66,11 +66,11 @@
 
   .verybig-bubbles {
     -webkit-animation: sideWays 5s ease-in-out infinite alternate,
-    upWays 4s ease-in-out infinite alternate;
+      upWays 4s ease-in-out infinite alternate;
     -moz-animation: sideWays 5s ease-in-out infinite alternate,
-    upWays 4s ease-in-out infinite alternate;
+      upWays 4s ease-in-out infinite alternate;
     animation: sideWays 5s ease-in-out infinite alternate,
-    upWays 4s ease-in-out infinite alternate;
+      upWays 4s ease-in-out infinite alternate;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,8 +102,8 @@
       width: 10rem;
       height: 10rem;
       -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
+      -moz-animation: none;
+      animation: none;
     }
 
     .link {
@@ -111,7 +111,10 @@
       list-style-type: none;
       color: black;
       text-align: center;
-      font-size: 23px;
+      font-family: "Mate SC", serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px white;
       user-select: none;
       @media screen and (max-width: 768px) {
         font-size: 18px;
@@ -119,4 +122,3 @@
     }
   }
 }
-
