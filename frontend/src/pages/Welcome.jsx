@@ -9,9 +9,7 @@ function Welcome() {
           <div className="chevrondown" />
         </div>
       </div>
-      <div className="parallax parallax1">
-        <h1>Ocean Adventures</h1>
-      </div>
+      <div className="parallax parallax1" />
       <div className="parallax parallax2">
         <Selection />
       </div>
