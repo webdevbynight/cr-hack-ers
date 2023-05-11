@@ -12,7 +12,7 @@ function Informations() {
   )[0];
   return (
     <>
-      <h2>{oceanData.title}</h2>
+      <h2>Informations</h2>
       <div className="information_container">
         <div className="information">
           <p>{oceanData.content}</p>
