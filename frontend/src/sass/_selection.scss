@@ -11,9 +11,13 @@
   }
 
   .verybig-bubbles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 13rem;
     height: 13rem;
     margin-top: 15rem;
+    text-align: center;
     z-index: 1;
     border-radius: 50%;
     background: rgba(217, 217, 217, 0.19);
@@ -23,19 +27,17 @@
       width: 10rem;
       height: 10rem;
     }
-    h3 {
-      text-align: center;
-      font-size: 23px;
-      margin-top: 3rem;
-      user-select: none;
-      @media screen and (max-width: 768px) {
-        font-size: 15px;
-      }
-    }
+  
     .link{
       text-decoration: none;
       list-style-type: none;
       color:black;
+      text-align: center;
+      font-size: 23px;
+      user-select: none;
+      @media screen and (max-width: 768px) {
+        font-size: 15px;
+      }
     }
     
   }
