@@ -21,17 +21,12 @@
     margin-bottom: 2rem;
 
     img {
-      width: 20%;
+      aspect-ratio: 1;
+      object-fit: cover;
     }
   }
 
   @media screen and (min-width: 700px) {
     flex-direction: column;
-
-    .pictures_info_container {
-      img {
-        width: 30%;
-      }
-    }
   }
 }
