@@ -6,12 +6,13 @@
  */
 
 @use "sass/base/mixins" with (
-    $media-queries-breakpoints: (
-        // Add custom breakpoints here if default ones do not fit the project
-    )
+  $media-queries-breakpoints: (
+    // Add custom breakpoints here if default ones do not fit the project
+  )
 );
 @use "sass/variables";
 @use "sass/base/reset";
 @use "sass/base/print";
 @use "sass/welcome";
+@use "sass/locations";
 @use "sass/header";
