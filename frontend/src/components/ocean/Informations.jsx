@@ -11,17 +11,19 @@ function Informations() {
     (ocean) => ocean.id === Number.parseInt(id, 10)
   )[0];
   return (
-    <div className="information_container">
+    <>
       <h2>{oceanData.title}</h2>
-      <div className="information">
-        <p>{oceanData.content}</p>
+      <div className="information_container">
+        <div className="information">
+          <p>{oceanData.content}</p>
+        </div>
+        <div className="pictures_info_container">
+          <img className="picture1_info" src={Picture1} alt="ocean_picture1" />
+          <img className="picture2_info" src={Picture2} alt="ocean_picture2" />
+          <img className="picture3_info" src={Picture3} alt="ocean_picture3" />
+        </div>
       </div>
-      <div className="pictures_info_container">
-        <img className="picture1_info" src={Picture1} alt="ocean_picture1" />
-        <img className="picture2_info" src={Picture2} alt="ocean_picture2" />
-        <img className="picture3_info" src={Picture3} alt="ocean_picture3" />
-      </div>
-    </div>
+    </>
   );
 }
 
