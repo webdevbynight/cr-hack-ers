@@ -1,0 +1,62 @@
+h2 {
+  font-size: 3rem;
+}
+
+.locations-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #67b2dd;
+  width: 60rem;
+  height: 15rem;
+  img {
+    width: 15rem;
+    margin-right: 2rem;
+  }
+  .text-container {
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .previousBtn:before {
+    content: "\003c";
+    padding-right: 5px;
+  }
+  .previousBtn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .nextBtn::before {
+    content: "\003e";
+    padding-right: 5px;
+  }
+  .nextBtn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  .addBtn {
+    position: relative;
+    top: 50px;
+    right: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #0921f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+}
