@@ -28,11 +28,9 @@ function Selection() {
         {oceans.map((ocean) => {
           return (
             <div key={ocean.id} className="verybig-bubbles">
-              <h3>
-                <NavLink to={`/ocean/${ocean.id}`} className="link">
-                  {ocean.title}
-                </NavLink>
-              </h3>
+              <NavLink to={`/ocean/${ocean.id}`} className="link">
+                {ocean.title}
+              </NavLink>
             </div>
           );
         })}
