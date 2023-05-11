@@ -1,0 +1,21 @@
+
+.header{
+    width: 100%;
+    
+
+.title-website{
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+
+    @media screen and (min-width:720px) {
+        font-size: 5rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        font-size: 8rem;
+    }
+}
+
+
+}
