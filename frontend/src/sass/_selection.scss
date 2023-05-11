@@ -1,0 +1,68 @@
+.verybig-bubbles {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  top: 125vh;
+  z-index: 1;
+
+  border-radius: 50%;
+
+  background: rgba(217, 217, 217, 0.19);
+  box-shadow: 0px 9px 12px 4px rgba(0, 0, 0, 0.25),
+    inset 16px 11px 20px -7px rgba(0, 0, 0, 0.54);
+
+  h3 {
+    text-align: center;
+    font-size: 23px;
+    margin-top: 3rem;
+    user-select : none;
+  }
+}
+
+.bubble1 {
+  left: 16vw;
+}
+
+.bubble2 {
+  left: 32vw;
+}
+
+.bubble3 {
+  left: 48vw;
+}
+
+.bubble4 {
+  left: 64vw;
+}
+
+.bubble5 {
+  left: 80vw;
+}
+
+.bubble-container1 {
+  position: absolute;
+  left: 10.5vw;
+  top: -10vh;
+}
+.bubble-container2 {
+  position: absolute;
+  left: 26.5vw;
+  top: -10vh;
+}
+.bubble-container3 {
+  position: absolute;
+  left: 42.5vw;
+  top: -10vh;
+}
+.bubble-container4 {
+  position: absolute;
+  left: 58.5vw;
+  top: -10vh;
+}
+.bubble-container5 {
+  position: absolute;
+  left: 74.5vw;
+  top: -10vh;
+}
+
+
