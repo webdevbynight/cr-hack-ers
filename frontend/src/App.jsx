@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/ocean" element={<Ocean />} />
+        <Route path="/ocean/:id" element={<Ocean />} />
       </Routes>
     </BrowserRouter>
   );
