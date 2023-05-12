@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import articles from "../data/articles.json";
+import { PropTypes } from "prop-types";
+import ButtonAdd from "./ButtonAdd";
 
-function Activities() {
+function Activities({ handleAddItem, carts, articles }) {
   const { id } = useParams();
   const activities = articles.filter(
     (article) =>
@@ -45,13 +46,19 @@ function Activities() {
             }}
           />
         )}
-
-        <button type="button" aria-label="addBtn" className="addBtn">
-          Réserver
-        </button>
+        <ButtonAdd
+          carts={carts}
+          handleAddItem={handleAddItem}
+          product={activities[activitiesIndex]}
+        />
       </div>
     </>
   );
 }
+Activities.propTypes = {
+  carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+  articles: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+};
 
 export default Activities;
