@@ -3,6 +3,7 @@ import { PropTypes } from "prop-types";
 import ButtonRemove from "../components/ButtonRemove";
 import ButtonAdd from "../components/ButtonAdd";
 import Reservation from "../components/Reservation";
+import ButtonValide from "../components/ButtonValide";
 
 function Basket({
   handleAddItem,
@@ -28,44 +29,47 @@ function Basket({
   }, [carts, totalItemsQuantity, totalItemsPrice]);
 
   return (
-    <article className="cart-container">
-      {carts.map((cart) => (
-        <div className="cart-box" key={cart.id}>
-          <div className="cart-img">
-            <img src={cart.image} alt="img category" />
-            <p>{cart.name}</p>
+    <div className="cart-page-container">
+      <article className="cart-container">
+        {carts.map((cart) => (
+          <div className="cart-box" key={cart.id}>
+            <div className="cart-img">
+              <img src={cart.image} alt="img category" />
+              <p>{cart.name}</p>
+            </div>
+            <div className="buttons-container">
+              <ButtonAdd handleAddItem={handleAddItem} product={cart} />
+              <span className="button-quantity" type="button">
+                {cart.quantity}
+              </span>
+              <ButtonRemove
+                handleRemoveItem={handleRemoveItem}
+                product={cart}
+              />
+            </div>
+            <div className="total-price-container">
+              <span>
+                {cart.price * cart.quantity} {cart.currency}
+              </span>
+            </div>
           </div>
-          <div className="buttons-container">
-            <ButtonAdd
-              handleAddItem={handleAddItem}
-              showreservation={showreservation}
-              handleTest={handleTest}
-              handleRemoveItem={handleRemoveItem}
-              setShowreservation={setShowreservation}
-              product={cart}
-            />
-            <button className="button-quantity" type="button">
-              {cart.quantity}
-            </button>
-            <ButtonRemove handleRemoveItem={handleRemoveItem} product={cart} />
-          </div>
-          <div className="button-remove-container">
-            <span>{cart.price * cart.quantity}</span>
-          </div>
+        ))}
+        <div className="total">
+          <span className="text-price">Total du panier</span>
+          <span className="price-value">{totalItemsPrice} €</span>
         </div>
-      ))}
-      <div className="total">
-        <span className="text-price">Total du panier</span>
-        <span className="price-value">{totalItemsPrice} €</span>
-      </div>
-      {showreservation && (
-        <Reservation
-          carts={carts}
-          handleTest={handleTest}
-          handleRemoveItem={handleRemoveItem}
-        />
-      )}
-    </article>
+
+        {showreservation && (
+          <Reservation
+            carts={carts}
+            handleTest={handleTest}
+            handleRemoveItem={handleRemoveItem}
+            setShowreservation={setShowreservation}
+          />
+        )}
+      </article>
+      {totalItemsQuantity !== 0 ? <ButtonValide /> : null}
+    </div>
   );
 }
 Basket.propTypes = {

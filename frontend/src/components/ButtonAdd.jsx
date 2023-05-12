@@ -7,7 +7,7 @@ function ButtonAdd({ handleAddItem, product }) {
       type="submit"
       onClick={() => handleAddItem(product)}
     >
-      Ajouter au panier
+      Réserver
     </button>
   );
 }
