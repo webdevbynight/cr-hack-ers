@@ -3,8 +3,17 @@ import { PropTypes } from "prop-types";
 import ButtonRemove from "../components/ButtonRemove";
 import ButtonAdd from "../components/ButtonAdd";
 import ButtonValide from "../components/ButtonValide";
+import Reservation from "../components/Reservation";
 
-function Basket({ handleAddItem, handleRemoveItem, carts }) {
+function Basket({
+  handleAddItem,
+  handleRemoveItem,
+  handleTest,
+  isOpen,
+  resetCarts,
+  carts,
+  showreservation,
+}) {
   const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
   const [totalItemsPrice, setTotalItemsPrice] = useState(0);
   useEffect(() => {
@@ -51,7 +60,13 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
           <span className="price-value">{totalItemsPrice} €</span>
         </div>
       </article>
-      {totalItemsQuantity !== 0 ? <ButtonValide /> : null}
+      {showreservation && (
+        <Reservation handleTest={handleTest} resetCarts={resetCarts} />
+      )}
+
+      {totalItemsQuantity !== 0 ? (
+        <ButtonValide handleTest={handleTest} isOpen={isOpen} />
+      ) : null}
     </div>
   );
 }
@@ -59,6 +74,10 @@ Basket.propTypes = {
   carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
   handleAddItem: PropTypes.func.isRequired,
+  handleTest: PropTypes.func.isRequired,
+  resetCarts: PropTypes.func.isRequired,
+  showreservation: PropTypes.func.isRequired,
+  isOpen: PropTypes.func.isRequired,
 };
 
 export default Basket;
