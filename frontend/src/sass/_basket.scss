@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
-.cart-page-container{
-  background: url("https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat fixed center / cover;
+.cart-page-container {
+  background: url("https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat fixed center / cover;
   min-height: 100vh;
   height: 100%;
   display: flex;
@@ -28,17 +29,17 @@
       border-bottom: 0.2rem solid #0c0c0c;
       gap: 2rem;
 
-      @media screen and (min-width:540px) {
+      @media screen and (min-width: 540px) {
         flex-direction: row;
-        justify-content: space-between;        
+        justify-content: space-between;
       }
 
-      .cart-img{
+      .cart-img {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
-        
+
         img {
           width: 10rem;
           height: 10rem;
@@ -49,16 +50,16 @@
           font-size: 1.8rem;
         }
 
-        @media screen and (min-width:540px) {
-          flex-direction: row; 
-          margin-bottom: 2rem;   
-          gap: 2rem;  
-          
+        @media screen and (min-width: 540px) {
+          flex-direction: row;
+          margin-bottom: 2rem;
+          gap: 2rem;
+
           img {
             width: 15rem;
             height: 15rem;
           }
-          p{
+          p {
             font-size: 2rem;
           }
         }
@@ -67,7 +68,7 @@
       .buttons-container {
         display: flex;
         align-items: center;
-       
+
         .addBtn {
           height: 3rem;
           width: 5rem;
@@ -78,30 +79,29 @@
           border-radius: 5px;
           font-size: 1rem;
         }
-    
+
         .button-quantity {
           padding: 0 1rem;
 
           font-size: 2rem;
         }
-        @media screen and (min-width:640px) {
-        .addBtn{
-          width: 8rem;
-          height: 5rem;
-          font-size: 1.4rem;
+        @media screen and (min-width: 640px) {
+          .addBtn {
+            width: 8rem;
+            height: 5rem;
+            font-size: 1.4rem;
+          }
+        }
+        @media screen and (min-width: 1024px) {
+          .addBtn {
+            width: 15rem;
+            height: 5rem;
+            font-size: 1.8rem;
+          }
         }
       }
-      @media screen and (min-width:1024px) {
-       
-        .addBtn{
-          width: 15rem;
-          height: 5rem;
-          font-size: 1.8rem;
-        }
-      }
-    }
 
-      .total-price-container{
+      .total-price-container {
         font-size: 2rem;
       }
     }
@@ -124,14 +124,11 @@
         font-weight: bold;
       }
 
-      @media screen and (min-width:640px) {
-        .text-price{
+      @media screen and (min-width: 640px) {
+        .text-price {
           font-size: 2rem;
         }
       }
     }
   }
-
 }
-
-
