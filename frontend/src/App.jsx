@@ -9,25 +9,17 @@ import articles from "./data/articles.json";
 import "./styles.scss";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   const [carts, setCarts] = useState([]);
   const [showreservation, setShowreservation] = useState(false);
-  const handleAddItem = () => {
-    console.info("hello");
-    setShowreservation(true);
-    // setCarts((prev) => {
-    //   const isItemInCart = prev.find((item) => item.id === clickedItem.id);
-    //   if (isItemInCart) {
-    //     return prev.map((item) =>
-    //       item.id === clickedItem.id
-    //         ? { ...item, quantity: item.quantity + 1 }
-    //         : item
-    //     );
-    //   }
-    //   return [...prev, { ...clickedItem, quantity: 1 }];
-    // });
-  };
 
-  const handleTest = (clickedItem) => {
+  const handleModal = () => {
+    setIsOpen(!isOpen);
+  };
+  const resetCarts = () => {
+    setCarts([]);
+  };
+  const handleAddItem = (clickedItem) => {
     setCarts((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
       if (isItemInCart) {
@@ -39,6 +31,10 @@ function App() {
       }
       return [...prev, { ...clickedItem, quantity: 1 }];
     });
+  };
+
+  const handleTest = () => {
+    setShowreservation(!showreservation);
   };
 
   const handleRemoveItem = (clickedItem) => {
@@ -63,6 +59,11 @@ function App() {
           path="/basket"
           element={
             <Basket
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              handleModal={handleModal}
+              articles={articles}
+              resetCarts={resetCarts}
               carts={carts}
               showreservation={showreservation}
               setShowreservation={setShowreservation}

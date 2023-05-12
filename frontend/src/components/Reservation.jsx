@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
 
-function Reservation({ handleTest, product, setShowreservation }) {
+function Reservation({ handleTest, resetCarts }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -136,8 +136,8 @@ function Reservation({ handleTest, product, setShowreservation }) {
                 setFirstName("");
                 setMessage("");
                 setChangeClass("send-form-off");
-                handleTest(product);
-                setShowreservation();
+                handleTest();
+                resetCarts();
               }}
             >
               Glou glou glou
@@ -156,6 +156,6 @@ Reservation.propTypes = {
     nutriScoreGrade: PropTypes.string,
   }).isRequired,
   handleTest: PropTypes.func.isRequired,
-  setShowreservation: PropTypes.func.isRequired,
+  resetCarts: PropTypes.func.isRequired,
 };
 export default Reservation;

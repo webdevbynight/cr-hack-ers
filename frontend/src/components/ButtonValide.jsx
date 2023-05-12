@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { PropTypes } from "prop-types";
 
-function ButtonValide() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(!isOpen);
+function ButtonValide({ handleTest, isOpen }) {
+  const openForm = () => handleTest();
   return (
     <div className="btn-valid">
-      <button type="button" className="buttonValide" onClick={openModal}>
+      <button type="button" className="buttonValide" onClick={openForm}>
         Valider ma commande
       </button>
       {isOpen && (
@@ -14,9 +12,6 @@ function ButtonValide() {
           <div className="modal">
             <div className="modal-content">
               <div className="modal-header">
-                <button type="submit" className="close" onClick={openModal}>
-                  &times;
-                </button>
                 <h2>Félicitations</h2>
               </div>
               <div className="modal-body">
@@ -33,4 +28,14 @@ function ButtonValide() {
   );
 }
 
+ButtonValide.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.string,
+    productName: PropTypes.string,
+    ingredientsText: PropTypes.string,
+    nutriScoreGrade: PropTypes.string,
+  }).isRequired,
+  handleTest: PropTypes.func.isRequired,
+  isOpen: PropTypes.func.isRequired,
+};
 export default ButtonValide;
