@@ -76,8 +76,8 @@ Basket.propTypes = {
   handleAddItem: PropTypes.func.isRequired,
   handleTest: PropTypes.func.isRequired,
   resetCarts: PropTypes.func.isRequired,
-  showreservation: PropTypes.func.isRequired,
-  isOpen: PropTypes.func.isRequired,
+  showreservation: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default Basket;

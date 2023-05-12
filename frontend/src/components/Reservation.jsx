@@ -149,12 +149,6 @@ function Reservation({ handleTest, resetCarts }) {
   );
 }
 Reservation.propTypes = {
-  product: PropTypes.shape({
-    image: PropTypes.string,
-    productName: PropTypes.string,
-    ingredientsText: PropTypes.string,
-    nutriScoreGrade: PropTypes.string,
-  }).isRequired,
   handleTest: PropTypes.func.isRequired,
   resetCarts: PropTypes.func.isRequired,
 };
