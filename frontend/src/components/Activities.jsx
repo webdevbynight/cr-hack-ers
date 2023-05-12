@@ -16,12 +16,12 @@ function Activities({ handleAddItem, carts, articles }) {
   return (
     <>
       <h2>Animations</h2>
-      <div className="activities-container">
+      <div className="articles-container">
         {activitiesIndex > 0 && (
           <button
             type="button"
             aria-label="previousBtn"
-            className="previousBtn"
+            className="btn previousBtn"
             onClick={() => {
               setActivitiesIndex(activitiesIndex - 1);
             }}
@@ -40,7 +40,7 @@ function Activities({ handleAddItem, carts, articles }) {
           <button
             type="button"
             aria-label="nextBtn"
-            className="nextBtn"
+            className="btn nextBtn"
             onClick={() => {
               setActivitiesIndex(activitiesIndex + 1);
             }}

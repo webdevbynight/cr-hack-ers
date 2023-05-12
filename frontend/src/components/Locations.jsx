@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { PropTypes } from "prop-types";
-// import articles from "../data/articles.json";
 import ButtonAdd from "./ButtonAdd";
 
 function Locations({ handleAddItem, carts, articles }) {
@@ -17,12 +16,12 @@ function Locations({ handleAddItem, carts, articles }) {
   return (
     <>
       <h2>Locations</h2>
-      <div className="locations-container">
+      <div className="articles-container">
         {locationsIndex > 0 && (
           <button
             type="button"
             aria-label="previousBtn"
-            className="previousBtn"
+            className="btn previousBtn"
             onClick={() => {
               setLocationsIndex(locationsIndex - 1);
             }}
@@ -41,7 +40,7 @@ function Locations({ handleAddItem, carts, articles }) {
           <button
             type="button"
             aria-label="nextBtn"
-            className="nextBtn"
+            className="btn nextBtn"
             onClick={() => {
               setLocationsIndex(locationsIndex + 1);
             }}

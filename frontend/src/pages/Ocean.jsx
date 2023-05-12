@@ -4,8 +4,9 @@ import { PropTypes } from "prop-types";
 import oceans from "../data/oceans.json";
 import Activities from "../components/Activities";
 import Locations from "../components/Locations";
-import Informations from "../components/ocean/Informations";
+import Informations from "../components/Informations";
 import Reservation from "../components/Reservation";
+
 
 function Ocean({ handleAddItem, handleRemoveItem, carts, articles }) {
   const { id } = useParams();
