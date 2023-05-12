@@ -9,12 +9,16 @@ function Reservation() {
   const [Nbr, setNbr] = useState("");
 
   const [changeClass, setChangeClass] = useState("send-form-off");
-  const disable = document.getElementById("button_Contact");
+
+  function submit(e) {
+    e.preventDefault();
+    setChangeClass("send-form-on");
+  }
 
   return (
     <div className="contact-page">
       <form className="contact-form" id="my_Form">
-        <h1 className="h1-Contact">Contactez-nous</h1>
+        <h1 className="h1-Contact">Réservation</h1>
         <label>
           <p>
             Prénom <span className="obligatoire">*</span>
@@ -42,6 +46,20 @@ function Reservation() {
             placeholder="Verne"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          <p>
+            Date de réservation <span className="obligatoire">*</span>
+          </p>
+          <input
+            id="date"
+            className="input"
+            type="date"
+            placeholder="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
             required
           />
         </label>
@@ -88,49 +106,38 @@ function Reservation() {
             required
           />
         </label>
-        <label>
-          <p>
-            Date de réservation <span className="obligatoire">*</span>
-          </p>
-          <input
-            id="date"
-            className="input"
-            type="date"
-            placeholder="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-        </label>
         <textarea
           id="text_Area"
           className="textaera"
-          placeholder="Saisissez votre message"
+          placeholder="Besoin de palmes ? Précisez nous vos besoins !"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          required
         />
 
-        <button className="buttonContact" id="button_Contact" type="submit">
+        <button
+          className="buttonContact"
+          id="button_Contact"
+          type="submit"
+          onClick={submit}
+        >
           Envoyer
         </button>
-
         <div id="send_Form" className={changeClass}>
           <div className="send-container">
+            <p>C'est réservé !</p>
             <button
               className="buttonSend"
               type="button"
               onClick={() => {
-                setChangeClass("send-form-off");
                 setFirstName("");
                 setLastName("");
                 setEmail("");
                 setFirstName("");
                 setMessage("");
-                disable.disabled = false;
+                setChangeClass("send-form-off");
               }}
             >
-              Test
+              Glou glou glou
             </button>
           </div>
         </div>
