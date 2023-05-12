@@ -47,14 +47,12 @@ function Locations({ handleAddItem, carts, articles }) {
             }}
           />
         )}
+
         <ButtonAdd
           carts={carts}
           handleAddItem={handleAddItem}
           product={locations[locationsIndex]}
         />
-        {/* <button type="button" aria-label="addBtn" className="addBtn">
-          Ajouter au panier
-        </button> */}
       </div>
     </>
   );

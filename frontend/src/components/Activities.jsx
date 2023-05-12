@@ -15,7 +15,7 @@ function Activities({ handleAddItem, carts, articles }) {
 
   return (
     <>
-      <h2>Activités</h2>
+      <h2>Animations</h2>
       <div className="activities-container">
         {activitiesIndex > 0 && (
           <button
@@ -46,7 +46,6 @@ function Activities({ handleAddItem, carts, articles }) {
             }}
           />
         )}
-
         <ButtonAdd
           carts={carts}
           handleAddItem={handleAddItem}

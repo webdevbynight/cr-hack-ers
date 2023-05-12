@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
 .bg-page {
   background: url("@assets/bg3.png") no-repeat top center;
   background-size: cover;
@@ -9,13 +11,23 @@
   align-items: center;
   padding: 15rem;
   h1 {
+    font-family: var(--font);
     font-size: 6rem;
   }
   h2 {
-    font-size: 3rem;
-    margin-top: 2rem;
+    font-size: 3.5rem;
+    margin: 5rem 0 1rem 0;
+    font-family: "Mate SC", serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  h3 {
+    font-family: "Mate SC", serif;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 2.5rem, 3rem);
   }
   p {
-    font-size: 18px;
+    font-family: "Mate SC", serif;
+    font-size: clamp(1.2rem, 1.9rem, 2rem);
   }
 }

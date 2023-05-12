@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+
 function Header() {
   return (
     <header className="header">
-      <h1 className="title-website">Ocean Adventure</h1>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
     </header>
   );
 }
