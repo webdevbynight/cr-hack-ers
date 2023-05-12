@@ -3,30 +3,30 @@
     "id": 1,
     "title": "Océan Pacifique",
     "content": "L’océan Pacifique est l’océan le plus vaste du globe terrestre. Le Pacifique fait partie de l’océan mondial et il comporte deux océans : le Pacifique Nord et le Pacifique Sud. Le Pacifique s’étend sur une surface de 165 250 000 km2, soit environ un tiers de la surface totale de la Terre et 21,5 millions km2 de plus que la surface totale de la planète Mars. Sa superficie est également supérieure à celle de l’ensemble des terres émergées de la planète. Il comprend l’Océanie dans sa totalité et quelques autres îles et archipels qui font traditionnellement partie de l’Asie (Japon, Philippines, Insulinde). Il est entouré par l’Amérique, le continent Antarctique, l’Australie, la Nouvelle-Guinée et l’Asie. La ligne de changement de date le traverse aux alentours du 180e méridien. Sa plus grande dimension en longitude est de 16 984 km depuis le tanjung Sopi, sur l’île de Morotai (Indonésie), jusqu’aux côtes colombiennes (El Naranjo).",
-    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5092befa51e134a7285b2c781e45a2af&license=4&safe_search=&group_id=1267084%40N20&format=json&nojsoncallback=1"
+    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e34c2b998db87de9e2ac904d591353d&license=4&safe_search=&group_id=1267084%40N20&format=json&nojsoncallback=1"
   },
   {
     "id": 2,
     "title": "Océan Arctique",
     "content": "L’océan Arctique, naguère appelé océan Glacial arctique, s’étend sur une surface d’environ 14 millions de km2, ce qui en fait le plus petit des océans. Il recouvre l’ensemble des mers situées entre le pôle Nord et les régions septentrionales de l’Europe, de l’Asie et de l’Amérique. Il communique avec le nord de l’océan Atlantique, recevant de grandes masses d’eau à travers la mer de Barents et le détroit de Fram. Il se trouve aussi en contact avec l’océan Pacifique à travers le détroit de Béring. La banquise arctique le recouvre en grande partie avec des variations saisonnières. En son centre, la banquise mesure jusqu’à 4 mètres d’épaisseur. Cette épaisseur est atteinte par le glissement de plaques de glace les unes sur les autres. On constate depuis 1979 une importante réduction de sa surface et de son albédo en raison du réchauffement climatique et d’un réchauffement régional (deux à trois fois plus rapide que dans le reste du monde pour la période 2010-2014). Ceci cause une hausse de l’absorption du rayonnement solaire par cette région du monde, ce qui pourrait accélérer le réchauffement de l’eau et la libération d’hydrates de méthane.",
-    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5092befa51e134a7285b2c781e45a2af&license=4&safe_search=&group_id=655350%40N23&format=json&nojsoncallback=1"
+    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e34c2b998db87de9e2ac904d591353d&license=4&safe_search=&group_id=655350%40N23&format=json&nojsoncallback=1"
   },
   {
     "id": 3,
     "title": "Océan Atlantique",
     "content": "L’océan Atlantique est l’un des cinq grands océans de la Terre. L’Atlantique fait partie de l’océan Mondial et comporte deux océans : l’Atlantique Nord et l’Atlantique Sud. Sa superficie de 106 640 000 km2 en fait le deuxième par la taille, derrière l’océan Pacifique. Il s’est formé par l’éloignement de plaques tectoniques il y a environ 180 millions d’années. Pendant de nombreux siècles, il fut la première étape des explorations européennes. Aujourd’hui, il demeure une voie de communication importante pour les pays qui le bordent et il occupe évidemment un rôle géopolitique important.",
-    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5092befa51e134a7285b2c781e45a2af&license=4&safe_search=&group_id=92768158%40N00&format=json&nojsoncallback=1"
+    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e34c2b998db87de9e2ac904d591353d&license=4&safe_search=&group_id=92768158%40N00&format=json&nojsoncallback=1"
   },
   {
     "id": 4,
     "title": "Océan Indien",
     "content": "L’océan Indien, autrefois appelé océan Oriental ou mer des Indes, est un océan qui s’étend sur une surface de 70 560 000 km2, soit près de 21 % du globe terrestre. Il est limité au nord par la péninsule Arabique, l’Iran, le Pakistan, l’Inde, le Bangladesh, la Birmanie et la Thaïlande ; à l’est par l’Indonésie (îles de Sumatra, Java, Bali, Sumbawa, Sumba, Timor, Nouvelle-Guinée), le détroit de Torrès et l’Australie ; le méridien 146° 55’ de longitude est frontalier de l’océan Pacifique ; au sud par le continent Antarctique enfin à l’ouest par le méridien 20° de longitude est, qui le sépare de l’océan Atlantique, et par l’Afrique.",
-    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5092befa51e134a7285b2c781e45a2af&license=4&safe_search=&group_id=42602747%40N00&format=json&nojsoncallback=1"
+    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e34c2b998db87de9e2ac904d591353d&license=4&safe_search=&group_id=42602747%40N00&format=json&nojsoncallback=1"
   },
   {
     "id": 5,
     "title": "Océan Austral",
     "content": "L’océan Austral est un océan défini par convention comme s’étendant entre le 60e parallèle sud et le continent antarctique. Cette délimitation correspond aux portions des océans Atlantique, Pacifique et Indien couverts juridiquement par le traité sur l’Antarctique. Son existence n’est pas universellement reconnue, car contrairement aux trois précédents, à peu près séparés par les points de démarcation que sont le Cap Horn, le Cap des Aiguilles et le Cap du Sud-Est, aucune borne naturelle ne le distingue spécialement des autres. Bien que ne couvrant pas l’intégralité de la plaque antarctique, il était précédemment appelé océan Antarctique ou océan Glacial antarctique. C’est en surface le quatrième océan, et le dernier défini par l’Organisation hydrographique internationale. Cependant l’océan Austral ne figure plus dans la 3e édition, actuellement en vigueur, de la liste officielle des océans et des mers éditée par cette même institution en 1953. Il apparait toutefois à nouveau dans les projets de révisions de cette liste entamés à la fin du xxe siècle, mais ceux-ci n’ont pas encore abouti, notamment en raison de divergences sur sa délimitation. Il est toutefois reconnu comme le cinquième océan par la National Geographic Society le 8 juin 2021 à l’occasion de la Journée mondiale de l’océan.",
-    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5092befa51e134a7285b2c781e45a2af&license=4&safe_search=&group_id=93984539%40N00&format=json&nojsoncallback=1"
+    "entryPoint": "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0e34c2b998db87de9e2ac904d591353d&license=4&safe_search=&group_id=93984539%40N00&format=json&nojsoncallback=1"
   }
 ]
