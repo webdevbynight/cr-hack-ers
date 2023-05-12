@@ -1,11 +1,5 @@
 function Bubbles() {
   return (
-    // <>
-    //   <span className="tiny-bubbles " />
-    //   <span className="middle-bubbles " />
-    //   <span className="big-bubbles " />
-    // </>
-
     <div id="background-wrap">
       <div className="bubble x1" />
       <div className="bubble x2" />
