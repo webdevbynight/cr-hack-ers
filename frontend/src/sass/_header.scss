@@ -1,20 +1,28 @@
 .header {
   position: absolute;
-  top: 0;
+  margin-top: 1rem;
   width: 100%;
 
-
   .title-website {
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;
+    justify-content: center;
     text-align: center;
+    width: 90%;
+    float: left;
 
     @media screen and (min-width: 720px) {
-      font-size: 5rem;
+      font-size: 4rem;
     }
 
     @media screen and (min-width: 1024px) {
-      font-size: 8rem;
+      font-size: 6rem;
     }
+  }
+
+  .logo_header {
+    width: 7%;
+    float: right;
+    margin-right: 1rem;
   }
 }
