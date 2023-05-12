@@ -1,78 +1,137 @@
-.cart-container {
-  height: 100vh;
-  background: url("./assets/fond-basket.jpg") no-repeat fixed center / cover;
-  width: 60%;
-  margin: 0 auto;
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+.cart-page-container{
+  background: url("https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat fixed center / cover;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 0rem;
+  font-family: "Mate SC", serif;
 
-  .cart-box {
+  .cart-container {
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 3px 3px 5px 2px rgba(185, 228, 241, 0.829);
+    width: 80%;
+    padding: 2rem;
+    margin: 10rem auto 5rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-    border-bottom: 0.2rem solid #0c0c0c;
+    flex-direction: column;
 
-    .p {
-      font-weight: bold;
-      margin-left: 1rem;
-    }
-    .buttons-container {
+    .cart-box {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      border-bottom: 0.2rem solid #0c0c0c;
+      gap: 2rem;
 
-      .button-increment {
-        padding: 0.5rem 1rem;
-        font-weight: bold;
-        margin-right: 0.5rem;
-      }
-      .button-quantity {
-        padding: 0.5rem 1rem;
-        font-weight: bold;
-        margin-right: 0.5rem;
+      @media screen and (min-width:540px) {
+        flex-direction: row;
+        justify-content: space-between;        
       }
 
-      .button-decrement {
-        padding: 0.5rem 1rem;
-        font-weight: bold;
-        margin-right: 0.5rem;
+      .cart-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        
+        img {
+          width: 10rem;
+          height: 10rem;
+        }
+        p {
+          text-align: center;
+
+          font-size: 1.8rem;
+        }
+
+        @media screen and (min-width:540px) {
+          flex-direction: row; 
+          margin-bottom: 2rem;   
+          gap: 2rem;  
+          
+          img {
+            width: 15rem;
+            height: 15rem;
+          }
+          p{
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .buttons-container {
+        display: flex;
+        align-items: center;
+       
+        .addBtn {
+          height: 3rem;
+          width: 5rem;
+          background-color: #0921f5;
+          color: white;
+          font-size: 1.8rem;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+        }
+    
+        .button-quantity {
+          padding: 0 1rem;
+
+          font-size: 2rem;
+        }
+        @media screen and (min-width:640px) {
+        .addBtn{
+          width: 8rem;
+          height: 5rem;
+          font-size: 1.4rem;
+        }
+      }
+      @media screen and (min-width:1024px) {
+       
+        .addBtn{
+          width: 15rem;
+          height: 5rem;
+          font-size: 1.8rem;
+        }
       }
     }
-    .button-remove {
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      letter-spacing: 0.2rem;
-      border: none;
-      outline: none;
-      color: #fff;
-      background-color: aqua;
-      border-radius: 0.5rem;
-      cursor: pointer;
+
+      .total-price-container{
+        font-size: 2rem;
+      }
     }
 
-    .button-remove :hover {
-      background-color: green;
-    }
+    .total {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
 
-    img {
-      width: 5rem;
-      height: 5rem;
+      .text-price {
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+      }
+      .price-value {
+        font-size: 3rem;
+        color: black;
+        font-weight: bold;
+      }
+
+      @media screen and (min-width:640px) {
+        .text-price{
+          font-size: 2rem;
+        }
+      }
     }
   }
 
-  .total {
-    display: flex;
-    justify-content: space-between;
-
-    .text-price {
-      font-size: 2rem;
-      color: aqua;
-      font-weight: bold;
-      letter-spacing: 0.2rem;
-    }
-    .price-value {
-      font-size: 2rem;
-      color: green;
-      font-weight: bold;
-    }
-  }
 }
+
+
