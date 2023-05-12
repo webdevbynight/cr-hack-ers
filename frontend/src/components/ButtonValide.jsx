@@ -36,6 +36,6 @@ ButtonValide.propTypes = {
     nutriScoreGrade: PropTypes.string,
   }).isRequired,
   handleTest: PropTypes.func.isRequired,
-  isOpen: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };
 export default ButtonValide;
