@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/**
+ * @site CR{hack}ERS
+ * @author Damien Arnaud, Victor Brito, Nicolas Lopes, Anne Louis, Trung Nguyen
+ */
+
+@use "sass/base/mixins" with (
+  $media-queries-breakpoints: (
+    // Add custom breakpoints here if default ones do not fit the project
+  )
+);
+@use "sass/variables";
+@use "sass/base/reset";
+@use "sass/base/print";
+@use "sass/welcome";
+@use "sass/header";
+@use "sass/selection";
+@use "sass/bubbles";
+@use "sass/informations";
+@use "sass/ocean";
+@use "sass/basket";
+@use "sass/buttonValide";
+@use "sass/reservation";
+
+@use "sass/select";
