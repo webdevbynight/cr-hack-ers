@@ -4,13 +4,15 @@ import oceans from "../data/oceans.json";
 
 function Informations() {
   const { id } = useParams();
-  const oceanData = oceans.filter(
-    (ocean) => ocean.id === Number.parseInt(id, 10)
-  )[0];
+  const [currentId, setCurrentId] = useState(id);
   const [photos, setPhotos] = useState([]);
   const [author1, setAuthor1] = useState("");
   const [author2, setAuthor2] = useState("");
   const [author3, setAuthor3] = useState("");
+  const oceanData = oceans.filter(
+    (ocean) => ocean.id === Number.parseInt(id, 10)
+  )[0];
+  if (currentId !== id) setCurrentId(id);
   useEffect(() => {
     fetch(oceanData.entryPoint)
       .then((res) => res.json())
@@ -18,7 +20,7 @@ function Informations() {
         setPhotos(data.photos.photo.slice(0, 3));
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [currentId]);
 
   // Since the first fetch does not allow to fetch the username directly (Flickr APIs seem to be constructed like a RDBSM without the SQL abilities :-/ ), we have to loop on each photo to fetch it
   useEffect(() => {
