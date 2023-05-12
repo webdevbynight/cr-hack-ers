@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import oceans from "../../data/oceans.json";
+import oceans from "../data/oceans.json";
 
 function Informations() {
   const { id } = useParams();
@@ -24,7 +24,7 @@ function Informations() {
   useEffect(() => {
     if (photos.length) {
       photos.forEach((photo, index) => {
-        const entryPoint = `https://www.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=5092befa51e134a7285b2c781e45a2af&photo_id=${photo.id}&format=json&nojsoncallback=1`;
+        const entryPoint = `https://www.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0e34c2b998db87de9e2ac904d591353d&photo_id=${photo.id}&format=json&nojsoncallback=1`;
         fetch(entryPoint)
           .then((res) => res.json())
           .then((userData) => {
@@ -74,14 +74,12 @@ function Informations() {
                     height="512"
                   />
                   <figcaption>
-                    {photo.title} (photo&nbsp;: {authors[index]}, CC BY)
+                    {photo.title}
+                    <span>(photo&nbsp;: {authors[index]}, CC BY)</span>
                   </figcaption>
                 </figure>
               );
             })}
-          {/* <img className="picture1_info" src={Picture1} alt="ocean_picture1" />
-          <img className="picture2_info" src={Picture2} alt="ocean_picture2" />
-          <img className="picture3_info" src={Picture3} alt="ocean_picture3" /> */}
         </div>
       </div>
     </>
