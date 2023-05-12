@@ -79,9 +79,6 @@ function Informations() {
                 </figure>
               );
             })}
-          {/* <img className="picture1_info" src={Picture1} alt="ocean_picture1" />
-          <img className="picture2_info" src={Picture2} alt="ocean_picture2" />
-          <img className="picture3_info" src={Picture3} alt="ocean_picture3" /> */}
         </div>
       </div>
     </>
