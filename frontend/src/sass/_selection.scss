@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+
+@-webkit-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+
+@-moz-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@-webkit-keyframes upWays {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+@-moz-keyframes upWays {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+@keyframes upWays {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+.verybig-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rem;
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 5rem;
+  }
+
+  .verybig-bubbles {
+    -webkit-animation: sideWays 5s ease-in-out infinite alternate,
+      upWays 4s ease-in-out infinite alternate;
+    -moz-animation: sideWays 5s ease-in-out infinite alternate,
+      upWays 4s ease-in-out infinite alternate;
+    animation: sideWays 5s ease-in-out infinite alternate,
+      upWays 4s ease-in-out infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 13rem;
+    margin-top: 15rem;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    background: -webkit-gradient(
+      radial,
+      center center,
+      0px,
+      center center,
+      100%,
+      color-stop(0%, rgba(255, 255, 255, 0.5)),
+      color-stop(70%, rgba(255, 255, 255, 0))
+    ); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(255, 255, 255, 0.473) 0%,
+      rgba(255, 255, 255, 0) 70%
+    ); /* Chrome10+,Safari5.1+ */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.149),
+      inset 0px 10px 30px 5px rgba(255, 255, 255, 0.818);
+
+    @media screen and (max-width: 768px) {
+      width: 10rem;
+      height: 10rem;
+      -webkit-animation: none;
+      -moz-animation: none;
+      animation: none;
+    }
+
+    .link {
+      text-decoration: none;
+      list-style-type: none;
+      color: black;
+      text-align: center;
+      font-family: "Mate SC", serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px white;
+      user-select: none;
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
