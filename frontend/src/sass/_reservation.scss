@@ -1,6 +1,5 @@
 
 .contact-page {
-    // background: url("@assets/fond-basket.jpg") no-repeat top center;
     background-color: rgba(255, 255, 255, 0.92);
     width: 100vw;
     position: fixed;
@@ -77,7 +76,11 @@
           box-shadow: 0 4px 33px 21px rgba(8, 5, 36, 0.25);
           border-radius: 25px;
           padding: 1.5rem;
+          width: 65vw;
           @media screen and (min-width: 768px) {
+            width: 50vw;
+          }
+          @media screen and (min-width: 1024px) {
             width: 30vw;
           }
   
@@ -176,7 +179,7 @@
         }
         @media screen and (min-width: 768px) {
           height: 20rem;
-          width: 10rem;
+          width: 30rem;
           font-size: 1.7rem;
   
           &::placeholder {
