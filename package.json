@@ -30,5 +30,8 @@
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.11.1"
   }
 }

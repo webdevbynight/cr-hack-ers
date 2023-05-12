@@ -9,7 +9,16 @@ import articles from "./data/articles.json";
 import "./styles.scss";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   const [carts, setCarts] = useState([]);
+  const [showreservation, setShowreservation] = useState(false);
+
+  const handleModal = () => {
+    setIsOpen(!isOpen);
+  };
+  const resetCarts = () => {
+    setCarts([]);
+  };
   const handleAddItem = (clickedItem) => {
     setCarts((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
@@ -22,6 +31,10 @@ function App() {
       }
       return [...prev, { ...clickedItem, quantity: 1 }];
     });
+  };
+
+  const handleTest = () => {
+    setShowreservation(!showreservation);
   };
 
   const handleRemoveItem = (clickedItem) => {
@@ -46,8 +59,16 @@ function App() {
           path="/basket"
           element={
             <Basket
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              handleModal={handleModal}
+              articles={articles}
+              resetCarts={resetCarts}
               carts={carts}
+              showreservation={showreservation}
+              setShowreservation={setShowreservation}
               handleAddItem={handleAddItem}
+              handleTest={handleTest}
               handleRemoveItem={handleRemoveItem}
             />
           }
@@ -56,9 +77,12 @@ function App() {
           path="/ocean/:id"
           element={
             <Ocean
+              showreservation={showreservation}
+              setShowreservation={setShowreservation}
               articles={articles}
               carts={carts}
               handleAddItem={handleAddItem}
+              handleTest={handleTest}
             />
           }
         />
