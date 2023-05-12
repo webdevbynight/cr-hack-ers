@@ -6,16 +6,16 @@ import logo from "../assets/logo.png";
 function Header() {
   return (
     <header className="header">
-      <Link to="/">
-        <img src={logo} alt="logo" />
-      </Link>
-      <Link to="/basket">
-        <img
-          className="logo_header"
-          src={canneAPeche}
-          alt="logo canne a peche"
-        />
-      </Link>
+      <div className="logo_header_container">
+        <Link to="/">
+          <img className="logo_header" src={logo} alt="logo" />
+        </Link>
+      </div>
+      <div className="logo_basket">
+        <Link to="/basket">
+          <img src={canneAPeche} alt="logo canne a peche" />
+        </Link>
+      </div>
     </header>
   );
 }
