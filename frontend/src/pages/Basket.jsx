@@ -12,12 +12,13 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
         return acc + item.quantity;
       }, 0);
       setTotalItemsQuantity(totalQuantity);
-      const totalPrice = carts[1].price;
+      const totalPrice = carts.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
       setTotalItemsPrice(totalPrice);
     }
   }, [carts, totalItemsQuantity, totalItemsPrice]);
 
-  console.info(carts);
   return (
     <article className="cart-container">
       {carts.map((cart) => (
@@ -39,10 +40,8 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
         </div>
       ))}
       <div className="total">
-        <span className="text-price">
-          {totalItemsQuantity * totalItemsPrice}
-        </span>
-        <span className="price-value">price €</span>
+        <span className="text-price">Total du panier</span>
+        <span className="price-value">{totalItemsPrice} €</span>
       </div>
     </article>
   );
