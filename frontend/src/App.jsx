@@ -5,25 +5,11 @@ import Welcome from "./pages/Welcome";
 import Ocean from "./pages/Ocean";
 import ScrollToTop from "./components/ScrollToTop";
 import Basket from "./pages/Basket";
+import articles from "./data/articles.json";
 import "./styles.scss";
 
 function App() {
-  const products = [
-    {
-      id: 1,
-      title: "salut",
-      img: "",
-      price: 34,
-    },
-    {
-      id: 2,
-      title: "robert",
-      img: "",
-      price: 54,
-    },
-  ];
   const [carts, setCarts] = useState([]);
-
   const handleAddItem = (clickedItem) => {
     setCarts((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
@@ -63,11 +49,19 @@ function App() {
               carts={carts}
               handleAddItem={handleAddItem}
               handleRemoveItem={handleRemoveItem}
-              products={products}
             />
           }
         />
-        <Route path="/ocean/:id" element={<Ocean />} />
+        <Route
+          path="/ocean/:id"
+          element={
+            <Ocean
+              articles={articles}
+              carts={carts}
+              handleAddItem={handleAddItem}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

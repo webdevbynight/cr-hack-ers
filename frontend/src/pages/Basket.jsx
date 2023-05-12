@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-return-assign */
 import { useEffect, useState } from "react";
-import Button from "../components/ButtonCart";
+import { PropTypes } from "prop-types";
+import ButtonRemove from "../components/ButtonRemove";
+import ButtonAdd from "../components/ButtonAdd";
 
 function Basket({ handleAddItem, handleRemoveItem, carts }) {
   const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
@@ -11,31 +11,28 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
       const totalQuantity = carts.reduce((acc, item) => {
         return acc + item.quantity;
       }, 0);
-      const totalPrice = carts.reduce((acc, item) => {
-        return item.price;
-      }, 0);
       setTotalItemsQuantity(totalQuantity);
+      const totalPrice = carts.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
       setTotalItemsPrice(totalPrice);
     }
-  }, [carts, totalItemsQuantity]);
-  console.info(carts);
+  }, [carts, totalItemsQuantity, totalItemsPrice]);
+
   return (
     <article className="cart-container">
       {carts.map((cart) => (
         <div className="cart-box" key={cart.id}>
           <div className="cart-img">
-            <img src={cart.img} alt="" />
-            <p>{cart.title}</p>
+            <img src={cart.image} alt="img category" />
+            <p>{cart.name}</p>
           </div>
           <div className="buttons-container">
-            <Button
-              handleAddItem={handleAddItem}
-              handleRemoveItem={handleRemoveItem}
-              product={cart}
-            />
+            <ButtonAdd handleAddItem={handleAddItem} product={cart} />
             <button className="button-quantity" type="button">
               {cart.quantity}
             </button>
+            <ButtonRemove handleRemoveItem={handleRemoveItem} product={cart} />
           </div>
           <div className="button-remove-container">
             <span>{cart.price * cart.quantity}</span>
@@ -43,13 +40,16 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
         </div>
       ))}
       <div className="total">
-        <span className="text-price">
-          {totalItemsQuantity * totalItemsPrice}
-        </span>
-        <span className="price-value">price €</span>
+        <span className="text-price">Total du panier</span>
+        <span className="price-value">{totalItemsPrice} €</span>
       </div>
     </article>
   );
 }
+Basket.propTypes = {
+  carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
+  handleRemoveItem: PropTypes.func.isRequired,
+  handleAddItem: PropTypes.func.isRequired,
+};
 
 export default Basket;
