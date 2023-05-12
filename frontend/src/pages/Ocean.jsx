@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { PropTypes } from "prop-types";
+import Select from "@components/Select";
 import oceans from "../data/oceans.json";
 import Activities from "../components/Activities";
 import Locations from "../components/Locations";
@@ -16,6 +17,7 @@ function Ocean({ handleAddItem, handleRemoveItem, carts, articles }) {
     <>
       <div className="bg-page">
         <div className="container-page">
+        <Select />
           <h1>{oceanData.title}</h1>
           <div className="infos">
             <Informations />
