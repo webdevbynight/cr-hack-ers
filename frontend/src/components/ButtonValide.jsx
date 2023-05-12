@@ -29,12 +29,6 @@ function ButtonValide({ handleTest, isOpen }) {
 }
 
 ButtonValide.propTypes = {
-  product: PropTypes.shape({
-    image: PropTypes.string,
-    productName: PropTypes.string,
-    ingredientsText: PropTypes.string,
-    nutriScoreGrade: PropTypes.string,
-  }).isRequired,
   handleTest: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
 };
