@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 
-function Reservation() {
+function Reservation({ handleTest, product, setShowreservation }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -135,6 +136,8 @@ function Reservation() {
                 setFirstName("");
                 setMessage("");
                 setChangeClass("send-form-off");
+                handleTest(product);
+                setShowreservation();
               }}
             >
               Glou glou glou
@@ -145,5 +148,14 @@ function Reservation() {
     </div>
   );
 }
-
+Reservation.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.string,
+    productName: PropTypes.string,
+    ingredientsText: PropTypes.string,
+    nutriScoreGrade: PropTypes.string,
+  }).isRequired,
+  handleTest: PropTypes.func.isRequired,
+  setShowreservation: PropTypes.func.isRequired,
+};
 export default Reservation;

@@ -7,8 +7,15 @@ import Locations from "../components/Locations";
 import Informations from "../components/Informations";
 import Reservation from "../components/Reservation";
 
-
-function Ocean({ handleAddItem, handleRemoveItem, carts, articles }) {
+function Ocean({
+  handleAddItem,
+  showreservation,
+  handleRemoveItem,
+  handleTest,
+  setShowreservation,
+  carts,
+  articles,
+}) {
   const { id } = useParams();
   const oceanData = oceans.filter(
     (ocean) => ocean.id === Number.parseInt(id, 10)
@@ -39,13 +46,24 @@ function Ocean({ handleAddItem, handleRemoveItem, carts, articles }) {
           </div>
         </div>
       </div>
-      <Reservation />
+      {showreservation && (
+        <Reservation
+          articles={articles}
+          carts={carts}
+          handleTest={handleTest}
+          handleRemoveItem={handleRemoveItem}
+          setShowreservation={setShowreservation}
+        />
+      )}
     </>
   );
 }
 Ocean.propTypes = {
   carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
+  handleTest: PropTypes.func.isRequired,
+  setShowreservation: PropTypes.func.isRequired,
+  showreservation: PropTypes.bool.isRequired,
   handleAddItem: PropTypes.func.isRequired,
   articles: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };

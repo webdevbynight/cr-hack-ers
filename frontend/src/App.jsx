@@ -10,7 +10,24 @@ import "./styles.scss";
 
 function App() {
   const [carts, setCarts] = useState([]);
-  const handleAddItem = (clickedItem) => {
+  const [showreservation, setShowreservation] = useState(false);
+  const handleAddItem = () => {
+    console.info("hello");
+    setShowreservation(true);
+    // setCarts((prev) => {
+    //   const isItemInCart = prev.find((item) => item.id === clickedItem.id);
+    //   if (isItemInCart) {
+    //     return prev.map((item) =>
+    //       item.id === clickedItem.id
+    //         ? { ...item, quantity: item.quantity + 1 }
+    //         : item
+    //     );
+    //   }
+    //   return [...prev, { ...clickedItem, quantity: 1 }];
+    // });
+  };
+
+  const handleTest = (clickedItem) => {
     setCarts((prev) => {
       const isItemInCart = prev.find((item) => item.id === clickedItem.id);
       if (isItemInCart) {
@@ -47,7 +64,10 @@ function App() {
           element={
             <Basket
               carts={carts}
+              showreservation={showreservation}
+              setShowreservation={setShowreservation}
               handleAddItem={handleAddItem}
+              handleTest={handleTest}
               handleRemoveItem={handleRemoveItem}
             />
           }
@@ -56,9 +76,12 @@ function App() {
           path="/ocean/:id"
           element={
             <Ocean
+              showreservation={showreservation}
+              setShowreservation={setShowreservation}
               articles={articles}
               carts={carts}
               handleAddItem={handleAddItem}
+              handleTest={handleTest}
             />
           }
         />

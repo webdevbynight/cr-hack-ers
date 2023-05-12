@@ -2,8 +2,16 @@ import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import ButtonRemove from "../components/ButtonRemove";
 import ButtonAdd from "../components/ButtonAdd";
+import Reservation from "../components/Reservation";
 
-function Basket({ handleAddItem, handleRemoveItem, carts }) {
+function Basket({
+  handleAddItem,
+  handleRemoveItem,
+  handleTest,
+  carts,
+  showreservation,
+  setShowreservation,
+}) {
   const [totalItemsQuantity, setTotalItemsQuantity] = useState(0);
   const [totalItemsPrice, setTotalItemsPrice] = useState(0);
   useEffect(() => {
@@ -28,7 +36,14 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
             <p>{cart.name}</p>
           </div>
           <div className="buttons-container">
-            <ButtonAdd handleAddItem={handleAddItem} product={cart} />
+            <ButtonAdd
+              handleAddItem={handleAddItem}
+              showreservation={showreservation}
+              handleTest={handleTest}
+              handleRemoveItem={handleRemoveItem}
+              setShowreservation={setShowreservation}
+              product={cart}
+            />
             <button className="button-quantity" type="button">
               {cart.quantity}
             </button>
@@ -43,13 +58,23 @@ function Basket({ handleAddItem, handleRemoveItem, carts }) {
         <span className="text-price">Total du panier</span>
         <span className="price-value">{totalItemsPrice} €</span>
       </div>
+      {showreservation && (
+        <Reservation
+          carts={carts}
+          handleTest={handleTest}
+          handleRemoveItem={handleRemoveItem}
+        />
+      )}
     </article>
   );
 }
 Basket.propTypes = {
   carts: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
+  handleTest: PropTypes.func.isRequired,
   handleAddItem: PropTypes.func.isRequired,
+  setShowreservation: PropTypes.func.isRequired,
+  showreservation: PropTypes.func.isRequired,
 };
 
 export default Basket;

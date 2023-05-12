@@ -41,6 +41,7 @@
       box-shadow: 5px 5px 3px 1px black;
     }
     .btn {
+      transition: all 0.3s ease-in-out;
       display: inline;
       padding: 10px 20px;
       background-color: transparent;
@@ -79,6 +80,7 @@
       border-radius: 5px;
       padding: .9rem 0;
       margin-top: 2rem;
+      transition: all 0.3s ease-in-out;
     }
   }
   @media (min-width: 860px) {
