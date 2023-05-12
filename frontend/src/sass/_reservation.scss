@@ -1,0 +1,235 @@
+.contact-page {
+background-color: white;
+    width: 100vw;
+    position: fixed;
+    top: 0rem;
+    // right: -350px;
+      right: 0px;
+    height: 100%;
+    // transition: right 0.5s ease;
+    border: solid 1px rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-bottom: 30px;
+    @media screen and (min-width: 950px) {
+          padding-bottom: 1rem;
+          width: 29vw;
+        }
+  
+    .contact-form {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      margin-top: 0rem;
+      height: 90vh;
+      width: 100%;
+      border-radius: 56px;
+      @media screen and (min-width: 650px) {
+        height: 80vh;
+        width: 85vw;
+        max-width: 1000px;
+      }
+      @media screen and (min-width: 950px) {
+        height: 85vh;
+        width: 29vw;
+      }
+  
+      .send-form-off {
+        display: none;
+      }
+  
+      .send-form-on {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        height: 78vh;
+        width: 95vw;
+        color: black;
+        font-size: 1.7rem;
+        background: rgba(217, 217, 217, 0.863);
+        box-shadow: 0 4px 53px 21px rgba(88, 76, 221, 0.25),
+          inset 0 4px 25px 2px rgba(88, 76, 221, 0.35);
+        border-radius: 56px;
+        @media screen and (min-width: 650px) {
+          height: 60vh;
+          width: 75vw;
+        }
+        @media screen and (min-width: 950px) {
+          height: 60vh;
+          max-width: 55vw;
+          font-size: 2rem;
+        }
+  
+        .send-container {
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          height: 30rem;
+          justify-content: space-around;
+          flex-direction: column;
+          background: rgba(30, 29, 29, 0.29);
+          border-radius: 16px;
+          padding: 1.5rem;
+          @media screen and (min-width: 650px) {
+            width: 40vw;
+          }
+  
+          p {
+            text-align: center;
+            font-size: 2rem;
+            @media screen and (min-width: 650px) {
+              font-size: 2.5rem;
+            }
+          }
+  
+          .buttonSend {
+            width: 40vw;
+            border: none;
+            background: rgba(145, 146, 153, 0.35);
+            border-radius: 1rem;
+            color: black;
+            font-size: 1.7rem;
+            color: #190101;
+            &:hover {
+              background: linear-gradient(188deg, #350278, #1b038e);
+              color: black;
+            }
+            @media screen and (min-width: 650px) {
+              width: 25rem;
+              height: 3.5rem;
+            }
+            @media screen and (min-width: 950px) {
+              width: 20rem;
+              height: 3.5rem;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+   
+  
+      .input {
+        display:flex;
+        flex-direction: row;
+        height: 3.5rem;
+        width: 30rem;
+        background-color: #d9d9d948;
+        border-color: none;
+        border-radius: 1rem;
+        border: 0;
+        color: black9;
+        padding-left: 1rem;
+        font-size: 1.7rem;
+        &::placeholder {
+          color:  rgb(0, 0, 0);
+          padding-left: 1rem;
+        }
+        @media screen and (min-width: 650px) {
+          height: 5rem;
+          width: 20rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
+            font-size: 1.7rem;
+          }
+        }
+        @media screen and (min-width: 950px) {
+          height: 5rem;
+          width: 20rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      
+      .textaera {
+        resize: none;
+        height: 15rem;
+        width: 30rem;
+        background-color: #d9d9d948;
+        border-radius: 1rem;
+        border: 0;
+        color: black;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-size: 1.7rem;
+  
+        &::placeholder {
+          color: rgb(0, 0, 0);
+          padding-left: 1rem;
+          padding-top: 1rem;
+        }
+        @media screen and (min-width: 650px) {
+          height: 20rem;
+          width: 10rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
+            font-size: 1.7rem;
+          }
+        }
+        @media screen and (min-width: 950px) {
+          height: 20rem;
+          width: 30rem;
+          font-size: 1.7rem;
+  
+          &::placeholder {
+            font-size: 1.7rem;
+          }
+        }
+      }
+  
+      label {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        font-size: 1.5rem;
+      }
+  
+      h1 {
+        font-size: 2rem;
+        color: black;
+        @media screen and (min-width: 650px) {
+          font-size: 2rem;
+        }
+      }
+      .obligatoire{
+        color: red;
+        }
+      .buttonContact {
+        height: 4rem;
+        width: 40rem;
+      }
+  
+      .buttonContact {
+        width: 15rem;
+        height: 3.5rem;
+        color: black;
+        font-size: 1.7rem;
+        border-radius: 1rem;
+        border: 0;
+        background-color: #d9d9d948;
+  
+  
+  
+        @media screen and (min-width: 650px) {
+          font-size: 1.7rem;
+  
+   
+        }
+      }
+    }
+  }
+ 
+  
+  
