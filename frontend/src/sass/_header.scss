@@ -13,15 +13,22 @@
     color: black;
     width: 60%;
 
-    @media screen and (min-width: 720px) {
-    }
-
+    
     @media screen and (min-width: 1024px) {
       width: 40%;
     }
   }
-
+  
   .logo_basket {
     width: 10%;
+  }
+  @media screen and (min-width: 910px) {
+    right: 10px;
+    .logo_header_container {
+      width: 25%;
+    }
+    .logo_basket {
+      width: 4%;
+    }
   }
 }
