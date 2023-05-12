@@ -46,7 +46,6 @@ function App() {
           path="/basket"
           element={
             <Basket
-              articles={articles}
               carts={carts}
               handleAddItem={handleAddItem}
               handleRemoveItem={handleRemoveItem}
@@ -56,18 +55,11 @@ function App() {
         <Route
           path="/ocean/:id"
           element={
-            <>
-              <Ocean
-                articles={articles}
-                carts={carts}
-                handleAddItem={handleAddItem}
-              />
-              <Basket
-                carts={carts}
-                handleAddItem={handleAddItem}
-                handleRemoveItem={handleRemoveItem}
-              />
-            </>
+            <Ocean
+              articles={articles}
+              carts={carts}
+              handleAddItem={handleAddItem}
+            />
           }
         />
       </Routes>
