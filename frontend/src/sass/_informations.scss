@@ -17,8 +17,8 @@
 
   .pictures_info_container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 2rem;
     margin-bottom: 2rem;
 
     img {
@@ -29,6 +29,12 @@
       transition: transform 0.3s ease-in-out;
 
     }
+    figcaption {
+      text-align: center;
+      span {
+        display: block;
+      }
+    }
   }
   img:hover {
     transform: scale(1.2);
@@ -36,5 +42,10 @@
 
   @media screen and (min-width: 700px) {
     flex-direction: column;
+    .pictures_info_container {
+      flex-direction: initial;
+      gap: initial;
+      justify-content: space-between;
+    }
   }
 }
