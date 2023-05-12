@@ -74,7 +74,8 @@ function Informations() {
                     height="512"
                   />
                   <figcaption>
-                    {photo.title} (photo&nbsp;: {authors[index]}, CC BY)
+                    {photo.title}
+                    <span>(photo&nbsp;: {authors[index]}, CC BY)</span>
                   </figcaption>
                 </figure>
               );
