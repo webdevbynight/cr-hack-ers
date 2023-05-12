@@ -1,7 +1,8 @@
-## Concept
+# Merbnb (by CR{hack}ERS)
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+This repository is a 48-hour hackathon made during a course at Wild Code School. This is a team project with contributions from me, [@AnneL51100](https://github.com/AnneL51100), [@nguyen-tt](https://github.com/nguyen-tt), [@SEF936](https://github.com/SEF936) and [@Zanelidd](https://github.com/Zanelidd).
+
+The project is based on React and uses two Flickr APIs.
 
 ## Setup & Use
 
