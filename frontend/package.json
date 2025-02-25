@@ -13,7 +13,7 @@
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^3.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
@@ -26,6 +26,6 @@
     "husky": "^8.0.3",
     "prettier": "^2.8.3",
     "sass": "^1.77.8",
-    "vite": "^4.5.3"
+    "vite": "^6.2.0"
   }
 }
