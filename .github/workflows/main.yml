@@ -51,7 +51,7 @@ jobs:
       - name: Set up npm
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: lts
 
       - name: Install caprover
         run: npm install -g caprover
