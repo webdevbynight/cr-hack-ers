@@ -31,7 +31,6 @@
   "devDependencies": {
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
-    "husky": "^8.0.3",
-    "sass": "^1.77.8"
+    "husky": "^8.0.3"
   }
 }
