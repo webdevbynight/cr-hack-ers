@@ -21,11 +21,8 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Install pnpm
-        run: npm -g install pnpm
-
       - name: Install Node.js dependencies
-        run: cd ./frontend && pnpm install && cd ../backend && pnpm install
+        run: cd ./frontend && npm install && cd ../backend && npm install
 
       - name: Run linters
-        run: cd ./frontend && pnpm run lint && cd ../backend && pnpm run lint
+        run: cd ./frontend && npm run lint && cd ../backend && npm run lint
